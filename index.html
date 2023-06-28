@@ -2,30 +2,24 @@
 <html lang="fr">
 <head>
 	<title>Nina Carducci photographe portraits et événementiel</title>
-	<style>
-		body{color:#202020}body{max-width:1920px;margin:auto}*{font-family:'Inter';font-style:normal}.top-header{background-color:white;position:sticky;top:0;z-index:1000;display:flex;justify-content:space-between;padding-inline:100px;padding-block:30px;align-items:center}.top-header .name{font-size:26px}.nav ul{display:flex;list-style-type:none;font-size:14px;margin-bottom:0}.nav li{padding-inline:10px}.nav a{text-decoration:none;color:#000}.social-link img{width:20px}#about{display:flex;background-color:#F6D2B8;padding-inline:100px;padding-block:100px;position:relative}.picture.left::before{content:' ';background-color:#E5975F;width:374px;height:329px;position:absolute;bottom:0;left:0;z-index:-1}.picture{flex:1;margin:0 20px;z-index:0}.picture img{width:100%}#about-me{flex:2}.about-me__title{margin-top:1em;margin-bottom:60px;font-size:30px}.about-me__introduction{font-family:'Spectral';font-weight:800;font-style:italic;width:60%}#about-me p{width:80%;font-size:14px}.d-block{width:auto;height:450px}.gallery-item{position:absolute;width:100%;height:100%;object-fit:cover;padding:.5em}@media all and (max-width:1180px){.picture{flex:2}#about{align-items:center}.about-me__title{margin-top:0;margin-bottom:1em}#about-me h6,#about-me p{width:100%}}@media all and (max-width:1000px){#about{flex-direction:column}.picture{width:50%}.picture.left::before{width:100%;height:30%;position:absolute;bottom:auto;top:0;left:0;z-index:-1}.about-me__title{text-align:center;margin-top:1em}}@media all and (max-width:650px){.top-header{flex-direction:column;padding-inline:0}.top-header .nav,.top-header .nav ul{width:100%;padding:0 0 0 0}.top-header .nav li{flex:1;padding-block:1em;text-align:center}.picture.left::before{height:150px}#about{padding-inline:2em;padding-block:2em}.picture{width:80%}}
-		</style>
-		
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
-	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="assets/dist/bootstrap.min.css">
+	<link rel="preload" href="assets/dist/style.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="assets/dist/style.css"></noscript>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
 	<meta charset="UTF-8">
-	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
+	<style>
+		body{color:#202020}body{max-width:1920px;margin:auto}*{font-family:'Inter';font-style:normal}.top-header{background-color:white;position:sticky;top:0;z-index:1000;display:flex;justify-content:space-between;padding-inline:100px;padding-block:30px;align-items:center}.top-header .name{font-size:26px}.nav ul{display:flex;list-style-type:none;font-size:14px;margin-bottom:0}.nav li{padding-inline:10px}.nav a{text-decoration:none;color:#000}.social-link img{width:20px}#about{display:flex;background-color:#F6D2B8;padding-inline:100px;padding-block:100px;position:relative}.picture.left::before{content:' ';background-color:#E5975F;width:374px;height:329px;position:absolute;bottom:0;left:0;z-index:-1}.picture{flex:1;margin:0 20px;z-index:0}.picture img{width:100%}#about-me{flex:2}.about-me__title{margin-top:1em;margin-bottom:60px;font-size:30px}.about-me__introduction{font-family:'Spectral';font-weight:800;font-style:italic;width:60%}#about-me p{width:80%;font-size:14px}.d-block{width:auto;height:450px}.gallery-item{position:absolute;width:100%;height:100%;object-fit:cover;padding:.5em}@media all and (max-width:1180px){.picture{flex:2}#about{align-items:center}.about-me__title{margin-top:0;margin-bottom:1em}#about-me h6,#about-me p{width:100%}}@media all and (max-width:1000px){#about{flex-direction:column}.picture{width:50%}.picture.left::before{width:100%;height:30%;position:absolute;bottom:auto;top:0;left:0;z-index:-1}.about-me__title{text-align:center;margin-top:1em}}@media all and (max-width:650px){.top-header{flex-direction:column;padding-inline:0}.top-header .nav,.top-header .nav ul{width:100%;padding:0 0 0 0}.top-header .nav li{flex:1;padding-block:1em;text-align:center}.picture.left::before{height:150px}#about{padding-inline:2em;padding-block:2em}.picture{width:80%}}
+		
+	</style>
+	<script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./assets/maugallery.js"></script>
 	<script src="./assets/scripts.js"></script>
-	<script>
-		window.addEventListener('load', function() {
-		  var link = document.createElement('link');
-		  link.rel = 'stylesheet';
-		  link.href = 'assets/style.css';
-		  document.head.appendChild(link);
-		});
-		</script>
 </head>
+
 <body>
 <div class="top-header">
 	<h1 class="name">Nina Carducci</h3>
@@ -49,7 +43,8 @@
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100" alt="car1">
+				<img src="assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100" alt="car1" width="800" height="600">
+
 			</div>
 			<div class="carousel-item">
 				<img src="assets/images/slider/nicholas-green-nPz8akkUmDI-unspl.webp" class="d-block w-100" alt="car2">
@@ -70,7 +65,7 @@
 </div>
 <div id="about">
 	<div class="picture left">
-		<img src="assets/images/nina.png" alt="photoprofile" width="100" height="400" />
+		<img src="assets/images/nina.webp" alt="photoprofile" width="100" height="400" />
 	</div>
 	<div id="about-me">
 		<h2 class="about-me__title">A propos de moi</h2>
@@ -164,7 +159,7 @@
 			</form>			
 		</div>
 		<div class="picture right">
-			<img src="assets/images/camera.png" alt="camera" width="100" height="350"/>
+			<img src="assets/images/camera.webp" alt="camera" width="100" height="350"/>
 		</div>
 	</div>
 </div>
