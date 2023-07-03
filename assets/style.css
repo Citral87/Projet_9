@@ -367,3 +367,9 @@ input[type="submit"] {
 	}
 }
 
+.d-block {
+	width: auto;
+	height: 600px
+}
+
+
