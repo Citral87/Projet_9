@@ -101,7 +101,7 @@ img.desk {
 }
 #about-me p {
 	width: 80%;
-	font-size: 14px;
+	font-size: 13px;
 }
 
 
@@ -371,5 +371,7 @@ input[type="submit"] {
 	width: auto;
 	height: 600px
 }
-
+ h3 {
+	font-size: 18px;
+ }
 
