@@ -43,17 +43,14 @@
 	</noscript>
 
 	<script type="application/ld+json">
-			{
-			  "@context": "http://schema.org",
-			  "@type": "Person",
-			  "name": "Nina Carducci",
-			  "url": "http://127.0.0.1:5500/index.html",
-			  "image": "./assets/images/nina.webp",
-			  "jobTitle": "Photographe professionnelle",
-			  "description": "Photographe professionnelle spécialisée dans les portraits et l'événementiel."
-			}
-			</script>
-	
+		{
+			"@context" : "http://schema.org",
+			"@type" : "Person",
+			"name" : "Nina Carducci",
+			"url" : "http://127.0.0.1:5500/index.html",
+			"sameAs" : "https://www.instagram.com/ninacarducci.photo/?hl=fr"
+		}
+		</script>
 	
 	<script defer src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -63,19 +60,21 @@
 </head>
 
 <body>
-	<div class="top-header">
-		<h1 class="name">Nina Carducci</h1>
+	<div class="top-header" itemscope itemtype="http://schema.org/Person">
+		<h1 class="name" itemprop="name">Nina Carducci</h1>
 		<div class="nav">
 			<ul>
-				<li><a href="#about">À propos</a></li>
-				<li><a href="#gallery">Galerie</a></li>
-				<li><a href="#services">Service</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<li><a href="#about" itemprop="url">À propos</a></li>
+				<li><a href="#gallery" itemprop="url">Galerie</a></li>
+				<li><a href="#services" itemprop="url">Service</a></li>
+				<li><a href="#contact" itemprop="url">Contact</a></li>
 				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
-						target="_blank"><img src="assets/images/instagram.png" alt="instagram" width="50"
+						target="_blank" itemprop="sameAs"><img src="assets/images/instagram.png" alt="instagram" width="50"
 							height="20"></a></li>
 			</ul>
 		</div>
+</div>
+
 	</div>
 	<div id="header">
 
@@ -90,16 +89,8 @@
 			</div>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash (3).webp" 
-     srcset="assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplashsmall.webp 412w, 
-             assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash (3).webp 1946w" 
-     sizes="(max-width: 412px) 412px, 1946px" 
-     loading="lazy" 
-     class="d-block w-100" 
-     alt="car1mob">
-
-
-
+					<img src="assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash(3).webp" class="d-block w-100"
+					alt="car1">
 				</div>
 				
 				<div class="carousel-item">
@@ -188,38 +179,42 @@
 		</div>
 	</div>
 	<div id="services">
-		<h2 class="title">Mes services</h2>
+		<h2 class="title" itemscope itemtype="http://schema.org/Service">Mes services</h2>
 		<div class="container">
 			<div class="service">
-				<div class="service__description">
-					<h3>Shooting photo</h3>
-					<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en
+				<div class="service__description" >
+					<h3 itemprop="name">Shooting photo</h3>
+					<p itemprop="description">Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en
 						Île-de-France pour réaliser vos photos</p>
 				</div>
-				<div class="service__price">
-					<h4>350€/demi journée</h4>
+				<div class="service__price" itemprop="price">
+					<h4 itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+						<meta itemprop="price" content="350" />
+						<meta itemprop="priceCurrency" content="EUR" />
+						<link itemprop="availability" href="http://schema.org/InStock" />
+						350€/demi journée</h4>
 					<span>Matériel, déplacement inclus</span>
 				</div>
 
 			</div>
 			<div class="service">
-				<div class="service__description">
-					<h3>Retouches</h3>
-					<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu
+				<div class="service__description" >
+					<h3 itemprop="name">Retouches</h3>
+					<p itemprop="description">Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu
 						optimal pour vos publications</p>
 				</div>
-				<div class="service__price">
+				<div class="service__price" itemprop="price">
 					<h4>50€/photo</h4>
 					<span>2 AR par photo</span>
 				</div>
 			</div>
 			<div class="service">
-				<div class="service__description">
-					<h3>Album photos</h3>
-					<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un
+				<div class="service__description" itemprop="description">
+					<h3 itemprop="name">Album photos</h3>
+					<p itemprop="description">Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un
 						album photo personnalisé</p>
 				</div>
-				<div class="service__price">
+				<div class="service__price" itemprop="price">
 					<h4>400€ album A4</h4>
 					<span>30 pages recto/verso</span>
 				</div>
